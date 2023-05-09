@@ -1,0 +1,84 @@
+
+/*:root { 
+}*/
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  overflow-x:hidden;
+}
+
+/*Typography*/
+
+::selection {
+  background: var(--color-primary);
+  color: white;
+}
+
+html {
+  /*62.5% of 16px = 10px*/
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-size: 2.4rem; /*mobile aproach first*/
+  line-height: 1.5; /*1.5*font size distancia entre linhas*/
+  color: var(--color-body);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-accent);
+  margin-bottom: 1rem; /*margem entre texto e titulo*/
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: 6rem;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+h3 {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+p {
+  margin-top: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  h1 {
+    font-size: 7rem;
+  }
+  h2 {
+    font-size: 4rem;
+  }
+  h3 {
+    font-size: 2.4rem;
+  }
+}
+
+/*Links*/
+a {
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 2.4rem; /*mobile aproach first*/
+  line-height: 1.5; /*1.5*font size distancia entre linhas*/
+  color: var(--color-body);
+}
