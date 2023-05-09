@@ -137,3 +137,31 @@ textarea:focus, input:focus{
   cursor: pointer;
   max-width: 60vw;
 }
+
+/*Pagination*/
+.pagination{
+  display: flex;
+  justify-content: center;
+  color: #EF2D56;
+}
+
+.pagination span{
+  background-color: #EF2D56;
+  color: white;
+  margin: 1rem 1rem;
+  padding: 0 1.5rem;
+  border-radius: 5px;
+}
+
+.pagination i{
+  font-size: 4rem;
+  margin: 0 1rem;
+}
+
+.selected{
+  background-color: #990726!important;
+}
+
+.blocked{
+  display: none;
+}
