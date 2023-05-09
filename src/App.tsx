@@ -1,6 +1,6 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Test from "./components/Test";
+import Test from "./components/Search";
 //Redux
 import { Provider } from "react-redux";
 import store from "./store";

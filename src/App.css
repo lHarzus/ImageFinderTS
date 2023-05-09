@@ -31,7 +31,7 @@ html {
 }
 
 body {
-  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-family: cursive, Inter, Arial, Helvetica, sans-serif;
   font-size: 2.4rem; /*mobile aproach first*/
   line-height: 1.5; /*1.5*font size distancia entre linhas*/
   color: var(--color-body);
@@ -74,6 +74,10 @@ p {
   }
 }
 
+::selection {
+  background-color: #F04065;
+}
+
 /*Links*/
 a {
   text-decoration: none;
@@ -81,4 +85,55 @@ a {
   font-size: 2.4rem; /*mobile aproach first*/
   line-height: 1.5; /*1.5*font size distancia entre linhas*/
   color: var(--color-body);
+}
+
+/*input*/
+.input{
+  display: flex;
+  border-radius: 30px;
+  box-shadow: 0px 0px 10px 3px lightgrey;
+  margin: 5rem 20vw 5rem 20vw;
+}
+
+.input input{
+  width: 100%;
+  border-radius: 30px;
+  padding: 1.5rem;
+  border: none;
+}
+
+.input button {
+  padding: 1.5rem;
+  border-radius: 30px;
+  border: none;
+  background-color: #EF2D56;
+  color: white;
+  cursor: pointer;
+}
+
+textarea:focus, input:focus{
+  outline: none;
+}
+
+/*Search*/
+.search { 
+  text-align: center;
+}
+
+.search h1{ 
+  color: #EF2D56;
+}
+
+.images-grid{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5vh 20vw;
+  gap: 1rem;
+}
+
+.images-grid img{
+  box-shadow: 0px 0px 10px 3px lightgrey;
+  border-radius: 20px;
+  cursor: pointer;
+  max-width: 60vw;
 }
