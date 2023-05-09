@@ -15,6 +15,8 @@ const Search = ({
 }) => {
   const inputRef = useRef<HTMLInputElement>(null);
   const [page, setPage] = useState(1);
+  const [item, setItem] = useState<Images | undefined>(undefined);
+  const [active, setActive] = useState(false);
 
   const onClick = () => {
     search(inputRef?.current?.value);
@@ -36,7 +38,14 @@ const Search = ({
             items={images}
             render={(item: Images) => (
               <>
-                <img src={item.thumbnail} alt="Imagem procurada"></img>
+                <img
+                  src={item.thumbnail}
+                  alt="Imagem procurada"
+                  onClick={() => {
+                    setItem(item);
+                    setActive(true);
+                  }}
+                ></img>
               </>
             )}
             page={page}
@@ -50,6 +59,18 @@ const Search = ({
           />
         </>
       )}
+      <div className={active ? "full-image" : "blocked"}>
+        <i
+          className="bi bi-x-circle"
+          onClick={() => {
+            setActive(false);
+          }}
+        ></i>
+        <a href={item?.webpageUrl} target="_blank">
+          {item?.title}
+        </a>
+        <img src={item?.url}></img>
+      </div>
     </div>
   );
 };
