@@ -12,6 +12,7 @@ export const Pagination = ({
   return (
     <div className="pagination">
       <i
+        role="left"
         className={
           currentPage === 1
             ? "bi bi-arrow-left-square-fill blocked"
@@ -23,13 +24,16 @@ export const Pagination = ({
       ></i>
       {Array.from({ length: pages }, (_, i) => i + 1).map((i) => (
         <span
+          key={i}
           onClick={() => setPage(i)}
           className={currentPage === i ? "selected" : ""}
+          role={`${i}`}
         >
           {i}
         </span>
       ))}
       <i
+        role="right"
         className={
           currentPage === pages
             ? "bi bi-arrow-right-square-fill blocked"

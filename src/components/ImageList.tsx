@@ -20,7 +20,9 @@ export const ImageList = <T,>({
   return (
     <div className="images-grid">
       {temp.map((i) => (
-        <div key={i}>{items[i] ? render(items[i]) : ""}</div>
+        <div key={i} role="contentinfo">
+          {items[i] ? render(items[i]) : ""}
+        </div>
       ))}
     </div>
   );

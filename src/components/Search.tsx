@@ -27,8 +27,10 @@ const Search = ({
     <div className="search">
       <h1>ImageFinderTS</h1>
       <div className="input">
-        <input type="text" ref={inputRef}></input>
-        <button onClick={onClick}>Search</button>
+        <input type="text" ref={inputRef} role="input"></input>
+        <button onClick={onClick} role="button">
+          Search
+        </button>
       </div>
       {loading ? (
         ""
